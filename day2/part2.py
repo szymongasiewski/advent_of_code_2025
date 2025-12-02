@@ -12,10 +12,8 @@ for id_range in id_ranges:
     for id in range(id_range[0], id_range[1] + 1):
         str_id = str(id)
 
-        for i in range(2, len(str_id) + 1):
-            if str_id.count(str_id[:len(str_id)//i]) == i and len(str_id) % i == 0:
-                invalid_ids.append(id)
-                break
+        if str_id in (str_id + str_id)[1:-1]:
+            invalid_ids.append(id)
 
        
 print(invalid_ids)

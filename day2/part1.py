@@ -11,7 +11,6 @@ invalid_ids = []
 for id_range in id_ranges:
     for id in range(id_range[0], id_range[1] + 1):
         str_id = str(id)
-        first_half, second_half = str_id[:len(str_id)//2],str_id[len(str_id)//2:]
 
         if str_id[:len(str_id)//2] ==  str_id[len(str_id)//2:]:
             invalid_ids.append(id)
